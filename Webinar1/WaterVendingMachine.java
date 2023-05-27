@@ -6,6 +6,9 @@ public class WaterVendingMachine implements VendingMachine {
     private LinkedList<Product> waters;
 
     @Override
+    public void putProduct() {
+    }
+
     public void putProduct(LinkedList<Product> item) {
         this.waters = item;
     }
