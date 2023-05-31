@@ -1,4 +1,4 @@
-package Webinar2;
+package Webinar2.Example;
 
 public abstract class Human {
     protected String name;
