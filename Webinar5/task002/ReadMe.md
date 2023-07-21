@@ -1,0 +1,11 @@
+Спроектировать и разработать задачи со слайдов
+
+![MVC (Классическая модель)](/Webinar5/task002/img/2023-07-21_23-52-07.png)
+
+![MVC Data's Model](/Webinar5/task002/img/2023-07-21_23-53-06.png)
+
+![MVC Service's Model](/Webinar5/task002/img/2023-07-21_23-53-44.png)
+
+![MVC Veiw's](/Webinar5/task002/img/2023-07-21_23-54-05.png)
+
+![MVC Controller's](/Webinar5/task002/img/2023-07-21_23-54-25.png)
