@@ -12,4 +12,9 @@ public interface DataService {
 
     List<User> readOnlyStudent();
 
+    List<User> readOnlyTeacher();
+
+    void delete(int id, Type type);
+
+    void update(int id, String name, String surname, String patron, Type type);
 }

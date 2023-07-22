@@ -18,7 +18,8 @@ public class Teacher extends User {
 
     @Override
     public String toString() {
-        return "Teacher [teacherId=" + teacherId + "]";
+        return "Teacher [teacherId=" + teacherId + " Name=" + super.name + " Surname=" + super.surname + " Patron="
+                + super.patron + "]";
     }
 
 }

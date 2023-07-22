@@ -58,4 +58,49 @@ public class UserSevice implements DataService {
         return students;
     }
 
+    @Override
+    public List<User> readOnlyTeacher() {
+        List<User> teacher = new ArrayList<>();
+        for (User user : userList) {
+            if (user instanceof Teacher) {
+                teacher.add(user);
+            }
+        }
+        return teacher;
+    }
+
+    @Override
+    public void delete(int id, Type type) {
+        for (int i = 0; i < userList.size(); i++) {
+            if (type == Type.STUDENT) {
+                if (userList.get(i) instanceof Student && ((Student) userList.get(i)).getStudentId() == id) {
+                    userList.remove(i);
+                }
+            }
+            if (type == Type.TEACHER) {
+                if (userList.get(i) instanceof Teacher && ((Teacher) userList.get(i)).getTeacherId() == id) {
+                    userList.remove(i);
+                }
+            }
+        }
+    }
+
+    @Override
+    public void update(int id, String name, String surname, String patron, Type type) {
+        for (int i = 0; i < userList.size(); i++) {
+            if (type == Type.STUDENT) {
+                if (userList.get(i) instanceof Student && ((Student) userList.get(i)).getStudentId() == id) {
+                    Student newUser = new Student(name, surname, patron, id);
+                    userList.set(i, newUser);
+                }
+            }
+            if (type == Type.TEACHER) {
+                if (userList.get(i) instanceof Teacher && ((Teacher) userList.get(i)).getTeacherId() == id) {
+                    Teacher newUser = new Teacher(name, surname, patron, id);
+                    userList.set(i, newUser);
+                }
+            }
+        }
+    }
+
 }
